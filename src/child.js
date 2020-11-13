@@ -3,7 +3,7 @@ import {TransactionContext} from './transContext';
 
 function Child() {
 
-let {transactions} = useContext(TransactionContext);
+let transactions = useContext(TransactionContext);
 
 let [newDesc,setDesc]= useState("");
 let [newAmount,setAmount]= useState(0);
@@ -29,13 +29,11 @@ const handleAddition=(event)=>{
 
     <ul className="transaction-list">
     {transactions.map((transObj,ind)=>{
-             return(<li key={ind} >
-
-
-      <span>{transObj.desc}</span>
-      <span>{transObj.amount}</span>
-    </li>
-             )
+             return(<li key={ind}>
+              <span>{transObj.desc}</span>
+              <span>${transObj.amount}</span>
+          </li>
+          )
          })}
     </ul>
     
