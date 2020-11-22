@@ -5,14 +5,14 @@ import TransactionReducer from './transReducer';
 const initialTransactions=[
 
     {amount:+100, desc:"Cash"},
-    {amount:-50, desc:"cold Drink"},
+    {amount:-80, desc:"Cold Sting"},
     {amount:-200, desc:"Cash deposit"}
 ]
 
 export const TransactionContext = createContext(initialTransactions);
 
 
- export const TransactionProvider=({children})=>{
+ export const TransactionProvider=({children})=>{ 
     let [state, dispatch] = useReducer(TransactionReducer, initialTransactions);
    
     function addTransaction(transObj){

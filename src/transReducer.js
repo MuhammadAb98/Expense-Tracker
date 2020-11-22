@@ -4,7 +4,7 @@ switch(action.type)
 {
     case "ADD_TRANSACTION" :
     {
-        return [action.payload, ...state]
+        return [action.payload, ...state] 
     }
 
     default :

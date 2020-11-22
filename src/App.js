@@ -6,9 +6,9 @@ import {TransactionProvider} from './transContext';
 
 function App() {
   return (
-    <div>
+    <TransactionProvider>
       <Child/>
-    </div>
+    </TransactionProvider>
   );
 }
 
